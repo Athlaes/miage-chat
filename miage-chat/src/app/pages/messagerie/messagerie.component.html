@@ -1,0 +1,13 @@
+<div class="shadow p-3 bg-white rounded border box overflow-auto">
+    <div class="row h-100">
+        <div class="col-3 h-100">
+            <app-salons [channel]="channel" (valueChange)='setChannel($event)'></app-salons>
+        </div>
+        <div class="col-6 h-100">
+            <app-discussion [channel]="channel"></app-discussion>
+        </div>
+        <div class="col-3 h-100">
+            <app-participants [channel]="channel"></app-participants>
+        </div>
+    </div>
+</div>

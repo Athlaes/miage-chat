@@ -1,0 +1,15 @@
+<div class="ctm-container">
+  <h2 class="ctm-container-header">Participants</h2>
+  <div *ngIf="channel" id="plist" class="people-list ctm-container-body">
+    <ul class="list-unstyled chat-list mt-2 mb-0">
+      <li *ngFor="let particpant of participants; index as i;" class="clearfix">
+        <div class="about">
+          <div class="name">{{particpant.firstName}} {{particpant.lastName}}</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="!channel" class="col-12">
+    <div class="chat">Aucun Salons choisi</div>
+  </div>
+</div>

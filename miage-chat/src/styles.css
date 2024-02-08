@@ -1,0 +1,158 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* General styles */
+.box{
+  height: 81vh;
+}
+
+.ctm-container {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  width: 100%;
+}
+
+.ctm-container-header {
+  width: 100%;
+}
+
+.ctm-container-body {
+  flex-grow: 1;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.ctm-container-body.invert {
+  display: flex;
+  flex-flow: column-reverse nowrap;
+}
+
+.container-footer {
+  padding: 10px;
+  width: 100%;
+}
+
+/* Styles for messages */
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+ul li:last-child {
+  margin-bottom: 0px;
+}
+
+.message-data {
+  margin-bottom: 15px;
+}
+
+.message-data img {
+  border-radius: 40px;
+  width: 40px;
+}
+
+.message-data-time {
+  color: #434651;
+  padding-left: 6px;
+}
+
+.message {
+  color: #444;
+  padding: 8px;
+  line-height: 26px;
+  font-size: 16px;
+  border-radius: 7px;
+  display: inline-block;
+  position: relative;
+}
+
+.my-message {
+  background: #c3e3eb;
+}
+
+.other-message {
+  background: #efefef;
+  text-align: right;
+}
+
+.chat-message {
+  padding: 20px;
+}
+
+/* Styles for channels */
+
+.chat-list li {
+  padding: 10px 15px;
+  list-style: none;
+  border-radius: 3px;
+}
+
+.chat-list li:hover {
+  background: #efefef;
+  cursor: pointer;
+}
+
+.chat-list li.active {
+  background: #efefef;
+}
+
+.chat-list li .name {
+  font-size: 15px;
+}
+
+.selected-name {
+  font-size: 15px;
+  border-left: purple 5px solid;
+  font-weight: 500;
+}
+
+/* Styles for connected members */
+
+.people-list {
+  -moz-transition: .5s;
+  -o-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s
+}
+.people-list .chat-list li {
+  padding: 10px 15px;
+  list-style: none;
+  border-radius: 3px
+}
+
+.people-list .chat-list li:hover {
+  background: #efefef;
+  cursor: pointer
+}
+
+.people-list .chat-list li.active {
+  background: #efefef
+}
+
+.people-list .chat-list li .name {
+  font-size: 15px
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+

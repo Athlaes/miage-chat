@@ -1,0 +1,60 @@
+<div class="login-wrapper d-flex justify-content-center" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box col-lg-6 col-sm-6 col-md-12">
+        <mat-card-header>
+            <mat-card-title>Register</mat-card-title>
+        </mat-card-header>
+        <form class="example-form" #f="ngForm" (ngSubmit)="onSubmit(f)" ngNativeValidate>
+            <mat-card-content>
+                <div class="row">
+                    <div class="col-6 mb-2">
+                        <label class="mb-2">Prénom</label>
+                        <input type="text" class="form-control" placeholder="prénom" id="first" name="first" ngModel
+                            minlength="4" #first="ngModel" required />
+                        <div *ngIf="first.invalid && (first.dirty || first.touched)" class="text-danger mt-1">
+                            <div *ngIf="first.errors?.['required']">le prénom est requis</div>
+                            <div *ngIf="first.errors?.['minlength']">
+                                le prénom doit avoir au moins 4 caractères.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-2">
+                        <label class="mb-2">Nom</label>
+                        <input type="text" class="form-control" placeholder="nom"
+                         name="last" ngModel
+                         minlength="4" #last="ngModel" required />
+                         <div *ngIf="last.invalid && (last.dirty || last.touched)" class="text-danger mt-1">
+                            <div *ngIf="last.errors?.['required']">le nom est requis</div>
+                            <div *ngIf="last.errors?.['minlength']">
+                                le nom doit avoir au moins 4 caractères.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-2">
+                        <label class="mb-2">Email</label>
+                        <input type="email" class="form-control" placeholder="email" 
+                        name="email" ngModel required 
+                        #email="ngModel"/>
+                        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger mt-1">
+                            <div *ngIf="email.errors?.['required']">l'email est requis</div>                            
+                        </div>
+                    </div>
+                    <div class="col-6 mb-2">
+                        <label class="mb-2">Password</label>
+                        <input type="password" class="form-control" placeholder="password"
+                         name="password" ngModel required 
+                         minlength="6" #password="ngModel"/>
+                         <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger mt-1">
+                            <div *ngIf="password.errors?.['required']">le mot de passe est requis</div>
+                            <div *ngIf="password.errors?.['minlength']">
+                                le mot de passe doit avoir au moins 4 caractères.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" type="submit">Inscription</button>
+            </mat-card-actions>
+        </form>
+    </mat-card>
+</div>

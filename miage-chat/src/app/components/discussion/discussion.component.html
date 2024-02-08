@@ -1,0 +1,30 @@
+<div class="col-12 ctm-container">
+  <div *ngIf="channel" class="ctm-container-body invert">
+    <ul class="m-b-0">
+      <li *ngFor="let message of messages;" class="clearfix">
+        <div class="message-data text-right">
+          <span class="message-data-time">
+            {{message.user.id != user?.id ? message.user.firstName : 'vous'}}
+            {{message.date | date:'short'}}
+          </span>
+        </div>
+        <div [ngClass]="message.user.id == user?.id ? 'message my-message' : 'message other-message float-right'">
+          {{message.text}}
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="channel" class="ctm-container-footer clearfix">
+    <form #f="ngForm" (ngSubmit)="sendMessage(f)">
+      <div class="input-group mb-0">
+        <input type="text" name="text" class="form-control" style="text-overflow: ellipsis;"
+          placeholder="Enter text here..." ngModel required #text="ngModel">
+        <div class="input-group-prepend mx-2">
+          <button type="submit" mat-button>
+            <span class="input-group-text">Envoyer&nbsp;<i class="fa fa-send"></i></span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

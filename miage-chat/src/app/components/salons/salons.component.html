@@ -1,0 +1,22 @@
+<div class="ctm-container">
+    <h2 class="ctm-container-header">Salons</h2>
+    <div id="plist" class="ctm-container-body">
+        <ul class="list-unstyled chat-list mt-2 mb-0 overflow-auto ">
+            <li *ngFor="let salon of salons; index as i;" class="clearfix" [ngClass]="salon.selected ? 'selected-name' : 'name'" (click)="setChannel(salon)">
+                <div class="about">
+                  {{salon.name}}
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="ctm-container-footer">
+        <form #f="ngForm" (ngSubmit)="createChannel(f)">
+            <div class="input-group mb-0">
+                <input type="text" name="name" class="form-control" placeholder="nouveau salon ?" ngModel required #name="ngModel">
+                <div class="input-group-prepend mx-2">
+                    <button type="submit" mat-raised-button color="primary"><i class="fa fa-plus"></i></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
