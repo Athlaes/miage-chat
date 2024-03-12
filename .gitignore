@@ -8,3 +8,43 @@ express/.idea/
 miage-chat/node_modules
 miage-chat/.vscode/
 miage-chat/.idea/
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# America chat
+AmericaChat/dist
+AmericaChat/tmp
+AmericaChat/out-tsc
+AmericaChat/bazel-out
+AmericaChat/node_modules
+AmericaChat/npm-debug.log
+AmericaChat/yarn-error.log
+AmericaChat/# IDEs and editors
+AmericaChat/.idea/
+AmericaChat/.project
+AmericaChat/.classpath
+AmericaChat/.c9/
+AmericaChat/*.launch
+AmericaChat/.settings/
+AmericaChat/*.sublime-workspace
+AmericaChat/# Visual Studio Code
+AmericaChat/.vscode/*
+AmericaChat/!.vscode/settings.json
+AmericaChat/!.vscode/tasks.json
+AmericaChat/!.vscode/launch.json
+AmericaChat/!.vscode/extensions.json
+AmericaChat/.history/*
+AmericaChat/# Miscellaneous
+AmericaChat/.angular/cache
+AmericaChat/.sass-cache/
+AmericaChat/connect.lock
+AmericaChat/coverage
+AmericaChat/libpeerconnection.log
+AmericaChat/testem.log
+AmericaChat/typings
+
+# System files
+AmericaChat/.DS_Store
+AmericaChat/Thumbs.db
+AmericaChat/.vscode/
+AmericaChat/.idea/
