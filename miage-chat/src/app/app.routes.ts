@@ -6,7 +6,7 @@ import { AuthGuard } from './shared/helpers/AuthGuard';
 
 export const routes: Routes = [
     { path: '', pathMatch: 'full', redirectTo: 'messagerie' },
-     { path: 'login', component: ConnexionComponent},
-      { path: 'register', component: InscriptionComponent },
-      { path: 'messagerie', component: MessagerieComponent, canActivate: [AuthGuard] }
+    { path: 'login', component: ConnexionComponent},
+    { path: 'register', component: InscriptionComponent },
+    { path: 'messagerie', component: MessagerieComponent, canActivate: [AuthGuard] }
 ];

@@ -1,4 +1,4 @@
-import { Injectable, inject } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { DatabaseService } from './database.service';
 
@@ -6,10 +6,9 @@ import { DatabaseService } from './database.service';
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private service: DatabaseService) {}
-  private router = inject(Router);
+  constructor(private service: DatabaseService, private router : Router) {}
 
-  isLogin(): Boolean {
+  isLogin(): boolean {
     return localStorage.getItem('currentUser') !== null;
   }
   getUser(): any {
@@ -18,7 +17,7 @@ export class AuthService {
       return JSON.parse(storedUser);
     }
   }
-  login(email: String, password: String) {
+  login(email: string, password: string) {
     const login = {
       email: email,
       password: password,
@@ -36,8 +35,13 @@ export class AuthService {
       },
     });
   }
+
   logOut() {
     localStorage.removeItem('currentUser');
     this.router.navigateByUrl('/login');
+  }
+
+  canActivate() {
+    
   }
 }

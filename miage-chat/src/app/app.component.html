@@ -2,7 +2,7 @@
   <mat-toolbar color="primary" class="app-header justify-content-between fixed-top">
     <div><a routerLink="messagerie" class="text-decoration-none text-white">Miage Chat</a></div>
     <span class="nav-tool-items">
-      <a *ngIf="user" mat-button routerLink="messagerie" routerLinkActive="active">messagerie</a>
+      <button *ngIf="user" mat-button routerLink="messagerie" routerLinkActive="active">messagerie</button>
       <button *ngIf="user" mat-button (click)="logOut()">Log Out</button>
       <a *ngIf="!user" mat-button routerLink="login" routerLinkActive="active">Log in</a>
       <a *ngIf="!user" mat-button mat-raised-button routerLink="register" routerLinkActive="active">Register</a>

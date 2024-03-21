@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { materialModule } from '../../shared/modules/material.module';
 import { DatabaseService } from '../../shared/service/database.service';
-import { Salon } from '../../shared/interfaces/Salon';
 import { NgForm } from '@angular/forms';
 import { AuthService } from '../../shared/service/auth.service';
 
